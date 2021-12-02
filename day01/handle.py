@@ -1,9 +1,11 @@
 import numpy as np
 
+
 def parseInput(file):
     with open(file, "r") as inputFile:
         inputData = [int(x) for x in inputFile.read().split('\n')]
     return inputData
+
 
 def part1(input):
     depths = parseInput(input)
@@ -17,7 +19,6 @@ def part1(input):
         prevDepth = depth
     
     return increaseCount
-
 
 
 def part2(input):
@@ -37,7 +38,6 @@ def part2(input):
     return increaseCount
 
 
-
 def main():
 
     assert(part1("./day01/test.txt")==7)
@@ -47,8 +47,8 @@ def main():
 
     assert(part2("./day01/test.txt")==5)
 
-    result1 = part2("./day01/input.txt")
-    print(f"Part 2 solution: {result1}")
+    result2 = part2("./day01/input.txt")
+    print(f"Part 2 solution: {result2}")
 
 
 if __name__ == "__main__":
